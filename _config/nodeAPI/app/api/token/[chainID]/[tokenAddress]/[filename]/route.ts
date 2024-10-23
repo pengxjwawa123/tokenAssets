@@ -68,7 +68,7 @@ export async function GET(request: Request, context: TContext): Promise<Response
 	const chainIDStr = (context?.params?.chainID || 1).toString();
 	const tokenAddress = (context?.params?.tokenAddress || '').toLowerCase();
 	const fileName = (context?.params?.filename || '').toLowerCase();
-	if (!['logo.svg', 'logo-32.png', 'logo-128.png'].includes(fileName)) {
+	if (!['logo.png', 'logo.svg', 'logo-32.png', 'logo-128.png'].includes(fileName)) {
 		if (tokenAddress === '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee') {
 			return await resolveGasToken(request);
 		}

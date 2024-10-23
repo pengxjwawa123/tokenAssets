@@ -36,7 +36,7 @@ async function resolveNotFound(request: Request): Promise<Response> {
 export async function GET(request: Request, context: TContext): Promise<Response> {
 	const chainIDStr = (context?.params?.chainID || 1).toString();
 	const fileName = (context?.params?.filename || '').toLowerCase();
-	if (!['logo.svg', 'logo-32.png', 'logo-128.png'].includes(fileName)) {
+	if (!['logo.png','logo.svg', 'logo-32.png', 'logo-128.png'].includes(fileName)) {
 		return await resolveNotFound(request);
 	}
 
