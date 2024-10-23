@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const BASE_CHAIN_URI = `https://raw.githubusercontent.com/SmolDapp/tokenAssets/main`
+const BASE_CHAIN_URI = `https://raw.githubusercontent.com/pengxjwawa123/tokenAssets/main`
 
 func ServeChain(c *gin.Context) {
 	chainIDStr := c.Param("chainID")
